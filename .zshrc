@@ -60,5 +60,10 @@ setopt autocd           # Automatically cd into typed directory.
 stty stop undef         # Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
+# Aliases
+alias ssh="ssh -oHostKeyAlgorithms=+ssh-dss -X"
+
+
 # Load syntax highlighting; should be last
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
