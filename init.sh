@@ -2,6 +2,10 @@
 echo "Installing zsh..."
 sudo apt install zsh
 
+# install oh-my-zsh
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" | sh install.sh
+
 # clone dotfiles
 echo "Cloning dotfiles..."
 git clone git@github.com:zpuckeridge/dotfiles.git $HOME
