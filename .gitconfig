@@ -1,0 +1,6 @@
+[user]
+        email = zacchary@puckeridge.me
+        name = zpuckeridge
+[push]
+        # auto update remote on push
+        autoSetupRemote = true
