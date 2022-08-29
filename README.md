@@ -1,3 +1,3 @@
 ### Installation
 
-`sh -c "$(curl -L https://gitlab.com/zpuckeridge/dotfiles/raw/master/dotfile-setup/init.sh)" | sh init.sh`
+`sh -c "$(curl -L https://github.com/zpuckeridge/dotfiles/main/init.sh)" | sh init.sh`
