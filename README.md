@@ -1,3 +1,3 @@
 ### Installation
 
-`sh -c "$(curl -L https://github.com/zpuckeridge/dotfiles/main/init.sh)" | sh init.sh`
+`sh -c "$(curl -o init.sh https://raw.githubusercontent.com/zpuckeridge/dotfiles/main/init.sh)" | sh init.sh`
