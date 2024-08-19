@@ -28,9 +28,6 @@ if [ ! -d "$HOME/.nodenv" ]; then
     echo "Installing nodenv..."
     git clone https://github.com/nodenv/nodenv.git ~/.nodenv
     cd ~/.nodenv && src/configure && make -C src
-    # Initialize nodenv
-    echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
-    echo 'eval "$(nodenv init -)"' >> ~/.zshrc
 else
     echo "nodenv is already installed."
 fi
@@ -51,6 +48,16 @@ if [ ! -d "$DOTFILES_DIR" ]; then
     git clone git@github.com:zpuckeridge/dotfiles.git $DOTFILES_DIR
 else
     echo "Dotfiles are already cloned."
+fi
+
+# Update .zshrc from dotfiles
+ZSHRC_SOURCE="$DOTFILES_DIR/.zshrc"
+if [ -f "$ZSHRC_SOURCE" ]; then
+    echo "Updating .zshrc from dotfiles..."
+    [ -f "$HOME/.zshrc" ] && rm "$HOME/.zshrc"
+    cp "$ZSHRC_SOURCE" "$HOME/.zshrc"
+else
+    echo "No .zshrc found in dotfiles."
 fi
 
 echo "Setup done. Run 'zsh' to start or if already running, restart it."
