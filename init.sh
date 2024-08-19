@@ -60,5 +60,14 @@ else
     echo "No .zshrc found in dotfiles."
 fi
 
+# Remove init.sh
+INIT_SH="$HOME/init.sh"
+if [ -f "$INIT_SH" ]; then
+    echo "Removing init.sh..."
+    rm "$INIT_SH"
+else
+    echo "init.sh does not exist."
+fi
+
 echo "Setup done. Run 'zsh' to start or if already running, restart it."
 echo "Tip: Use 'chsh -s $(which zsh)' to set zsh as your default shell."
