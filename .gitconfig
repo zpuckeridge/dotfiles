@@ -1,6 +1,42 @@
 [user]
-        email = zacchary@puckeridge.me
-        name = zpuckeridge
+	name = zpuckeridge
+	email = zacchary@puckeridge.me
+
+[init]
+	defaultBranch = main
+
 [push]
-        # auto update remote on push
-        autoSetupRemote = true
+	autoSetupRemote = true
+	followTags = true
+
+[pull]
+	rebase = false
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[rebase]
+	autoStash = true
+
+[core]
+	# macOS path; Linux often uses less -R
+	pager = less -FRX
+	ignorecase = false
+	autocrlf = input
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
+[rerere]
+	enabled = true
+
+[help]
+	autocorrect = prompt

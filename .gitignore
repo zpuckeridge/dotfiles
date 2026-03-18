@@ -1,2 +1,13 @@
+# zsh
 .histfile
-.zcompdump
+.zsh_history
+.zcompdump*
+*.zwc
+
+# local overrides (if ever added to repo by mistake)
+.zshrc.local
+
+# OS / editor
+.DS_Store
+*.swp
+*~
